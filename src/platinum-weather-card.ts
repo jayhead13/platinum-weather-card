@@ -1021,6 +1021,8 @@ export class PlatinumWeatherCard extends LitElement {
       case 'custom2': return this.slotCustom2;
       case 'custom3': return this.slotCustom3;
       case 'custom4': return this.slotCustom4;
+      case 'custom5': return this.slotCustom5;
+      case 'custom6': return this.slotCustom6;
       case 'empty': return this.slotEmpty;
       case 'remove': return this.slotRemove;
     }
@@ -1508,6 +1510,34 @@ export class PlatinumWeatherCard extends LitElement {
           <ha-icon icon=${icon}></ha-icon>
         </div>
         <div class="slot-text custom-4-text">${value}</div><div class="slot-text unit">${unit}</div>
+      </li>
+    `;
+  }
+
+  get slotCustom5(): TemplateResult {
+    var icon = this._config.custom5_icon ? this._config.custom5_icon : 'mdi:help-box';
+    var value = this._config.custom5_value && this.hass.states[this._config.custom5_value] !== undefined ? this.hass.states[this._config.custom5_value].state : 'unknown';
+    var unit = this._config.custom5_units ? this._config.custom5_units : '';
+    return html`
+      <li>
+        <div class="slot-icon">
+          <ha-icon icon=${icon}></ha-icon>
+        </div>
+        <div class="slot-text custom-5-text">${value}</div><div class="slot-text unit">${unit}</div>
+      </li>
+    `;
+  }
+
+  get slotCustom6(): TemplateResult {
+    var icon = this._config.custom6_icon ? this._config.custom6_icon : 'mdi:help-box';
+    var value = this._config.custom6_value && this.hass.states[this._config.custom6_value] !== undefined ? this.hass.states[this._config.custom6_value].state : 'unknown';
+    var unit = this._config.custom6_units ? this._config.custom6_units : '';
+    return html`
+      <li>
+        <div class="slot-icon">
+          <ha-icon icon=${icon}></ha-icon>
+        </div>
+        <div class="slot-text custom-6-text">${value}</div><div class="slot-text unit">${unit}</div>
       </li>
     `;
   }
