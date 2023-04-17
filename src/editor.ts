@@ -485,6 +485,30 @@ export class WeatherCardEditor extends LitElement implements LovelaceCardEditor 
     return this._config?.custom4_units || '';
   }
 
+  get _custom5_value(): string {
+    return this._config?.custom4_value || '';
+  }
+
+  get _custom5_icon(): string {
+    return this._config?.custom4_icon || '';
+  }
+
+  get _custom5_units(): string {
+    return this._config?.custom4_units || '';
+  }
+
+  get _custom6_value(): string {
+    return this._config?.custom4_value || '';
+  }
+
+  get _custom6_icon(): string {
+    return this._config?.custom4_icon || '';
+  }
+
+  get _custom6_units(): string {
+    return this._config?.custom4_units || '';
+  }
+  
   get _daily_forecast_layout(): layoutOrientation | '' {
     return this._config?.daily_forecast_layout || '';
   }
